@@ -105,12 +105,21 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-blue);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 5px 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-blue);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -146,7 +155,7 @@ p {
 .navbar__toggle-btn {
   position: absolute;
   top: 15px;
-  right: 32px;
+  right: 20px;
   font-size: 30px;
   color: var(--color-white);
   display: none;
@@ -155,6 +164,10 @@ p {
 /* Home */
 #home {
   position: relative;
+}
+
+.home__mobile {
+  display: none;
 }
 
 .home__contact {
@@ -399,6 +412,15 @@ p {
     width: 100%;
     text-align: center;
     display: none;
+  }
+
+  .home__video {
+    display: none;
+  }
+
+  .home__mobile {
+    display: block;
+    width: 100%;
   }
 
   .about__majors {
