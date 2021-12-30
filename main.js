@@ -10,3 +10,17 @@ document.addEventListener('scroll', () => {
     navbar.classList.remove('navbar--dark');
   }
 });
+
+// Handle scrolling when tapping on the navbar nenu
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', () => {
+  const target = event.target;
+  const link = target.dataset.link;
+  if (link == null) {
+    return
+  }
+  const scrollTo = document.querySelector(link);
+  const top = scrollTo.offsetTop - navbarHeight < 0 ? 0 : scrollTo.offsetTop - navbarHeight;  
+  const left = scrollTo.offsetLeft;
+  window.scrollTo({top:top, left:left, behavior: 'smooth'});
+});
