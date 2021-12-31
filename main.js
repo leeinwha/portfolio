@@ -59,6 +59,11 @@ workBtnContainer.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
+
+  // Remove selection from the previous item and select the new one
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  e.target.classList.add('selected');
   projectContainer.classList.add('ani-out');
   setTimeout(() => {
     projects.forEach((project) => {
