@@ -171,6 +171,9 @@ p {
 #home {
   position: relative;
 }
+.home__video {
+  width: 100%;
+}
 
 .home__mobile {
   display: none;
