@@ -507,7 +507,7 @@ p {
   }
 
   .category__btn {
-    padding: 5px 17px;
+    padding: 5px 10px;
   }
 
   .category__btn span {
@@ -525,5 +525,6 @@ p {
     line-height: 50px;
     right: 16px;
     bottom: 16px;
+    padding: 0;
   }
 }
