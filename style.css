@@ -61,6 +61,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  padding: 0;
 }
 
 span {
@@ -456,6 +457,10 @@ p {
     --font-regular: 16px;
     --font-small: 14px;
     --font-micro: 12px;
+  }
+
+  button {
+    padding: 0;
   }
 
   .navbar__toggle-btn {
