@@ -11,6 +11,7 @@ document.addEventListener('scroll', () => {
   }
 });
 
+
 // Handle scrolling when tapping on the navbar nenu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', () => {
@@ -25,11 +26,13 @@ navbarMenu.addEventListener('click', () => {
   window.scrollTo({top:top, left:left, behavior: 'smooth'});
 });
 
+
 // Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
+
 
 // Show "arrow up" button when scrolling down
 const homeHeight = home.getBoundingClientRect().height;
@@ -45,6 +48,34 @@ document.addEventListener('scroll', () => {
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
 });
+
+
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+  projectContainer.classList.add('ani-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if(filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('ani-out');
+  },300);
+});
+
+
+
+
+
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
