@@ -5,13 +5,14 @@ $(document).ready(function() {
 		centeredSlides: true,
         slidesOfsetBefore: 0,
         spaceBetween: '10%',
+        speed:2000,
         autoplay: {
             delay: 2000,
             disableOnInteraction: false,
         },            
         breakpoints: {
             1025: {
-                slidesPerView: 1,                
+                slidesPerView: 1,                              
             },
         },        
     });
@@ -22,8 +23,9 @@ $(document).ready(function() {
 		centeredSlides: true,
         slidesOfsetBefore: 0,
         spaceBetween: '10%',
+        speed:2000,
         autoplay: {
-            delay: 2000,
+            delay: 5000,
             disableOnInteraction: false,
         },
         breakpoints: {
@@ -39,8 +41,9 @@ $(document).ready(function() {
 		centeredSlides: true,
         slidesOfsetBefore: 0,
         spaceBetween: '10%',
+        speed:2000,
         autoplay: {
-            delay: 2000,
+            delay: 5000,
             disableOnInteraction: false,
         },        
     });
@@ -50,6 +53,7 @@ $(document).ready(function() {
 		centeredSlides: true,
         slidesOfsetBefore: 0,
         spaceBetween: '10%',
+        speed:2000,
         autoplay: {
             delay: 2000,
             disableOnInteraction: false,
@@ -62,6 +66,7 @@ $(document).ready(function() {
 		centeredSlides: true,
         slidesOfsetBefore: 0,
         spaceBetween: '10%',
+        speed:2000,
         autoplay: {
             delay: 2000,
             disableOnInteraction: false,
