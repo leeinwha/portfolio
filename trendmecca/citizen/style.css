@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500&display=swap');
     	body{font-family: 'Noto Sans KR', sans-serif; margin: 0;}
-        a{text-decoration: none;}
-        #header{position:initial!important;}        
-        /*#footer{position:fixed!important;}*/
-        .main_top_banner{display:none!important;}
+        a{text-decoration: none;}      
         ul,li{list-style: none;}        
         @media screen and (min-width: 1025px){
         	section{width:100%; min-width:1400px; position:relative;}
@@ -20,9 +17,9 @@
             @keyframes sec1_ani3{100%{opacity:1; top:0;}}
             .section2{background-color:#f7f7f7; padding:100px 0;}
            	.section2_swiper{width:85%; margin:0 auto; background-color:#f7f7f7;}
-            .product_no{font-size:25px; text-align:center; color: #3a3a3a;}
-            .section3_swiper{width:85%; margin:30px auto;}
-            .section4_swiper{position:absolute; left:50%; top:15%; transform:translateX(-50%); width:75%;}
+            .product_no{font-size:25px; text-align:center; color: #3a3a3a; font-family: 'Noto Sans KR', sans-serif;}
+            .section3_swiper{width:85%; margin:30px auto; overflow: hidden;}
+            .section4_swiper{position:absolute; left:50%; top:15%; transform:translateX(-50%); width:75%; }
             .section6{padding-top:200px; background-color:#000;}
             .sec6_obj1{position:absolute; top:-22%; left:50%; transform:translate(-50%); width:30%;}
             .sec6_obj2{position:absolute; bottom:9%; left:50%; transform:translate(-50%); width:45%;}

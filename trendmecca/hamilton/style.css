@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500&display=swap');
+    	body{font-family: 'Noto Sans KR', sans-serif; background-color:#f7f7f7;}
+        a{text-decoration: none;}      
+        ul,li{list-style: none;}       
+        @media screen and (min-width: 1025px){
+        	section{width:100%; min-width:1400px; position:relative;}
+            .content_m{display:none;}
+        	.content_pc{position:relative; width:100%; font-size:0;}            
+        	.content_pc img{width:100%;}
+            .pin-spacer{background-color:#f7f7f7;}
+			.image_wrap img {width:100%;}
+            .sec1_obj2{position:absolute; left:0; top:0; width:100%;opacity:0; animation: sec1_ani1 12s ease infinite;}
+            @keyframes sec1_ani1{25%{opacity:1;} 50%{opacity:0;} 75%{opacity:1;} 100%{opacity:0;}}
+            .section2{width:100vw; height:75vh; background-color:#f7f7f7;}
+            .section2_m{display:none;}
+            .sec2_obj1{width:21%; margin:140px auto; opacity:0;}
+            .sec2_obj2{width:46%; margin:0 auto;opacity:0;}
+            .sec2_obj3{width:45%; margin:70px auto;opacity:0;}
+            .section3{padding:100px 0; background-color:#fff;}
+           	.section3_swiper{width:90%; margin:0 auto;}
+            .product_no{font-size:25px; text-align:center; color: #3a3a3a; font-family: 'Noto Sans KR', sans-serif;}            
+            .section4_swiper{position:absolute; right:3.2%; bottom:20%;  width:70%;}
+            .content_pc .section4_swiper .swiper-slide {margin-right:2.6%!important; width:31%!important;}            
+            .section5_swiper{position:absolute; left:3.2%; bottom:20%;  width:70%;}
+            .content_pc .section5_swiper .swiper-slide {margin-right:2.6%!important; width:31%!important;}         		
+        	.issue__prodList__wrapper {position:relative;}
+			.issue__prodList__wrapper .swiper-button-prev{width:50px; height:50px; left:0 !important;  background-image:url("/design/mobile_kr/mainArrow_l_.png") !important;}
+			.issue__prodList__wrapper .swiper-button-next{width:50px; height:50px; right:0 !important; background-image:url("/design/mobile_kr/mainArrow_r_.png") !important;}           
+        }        
+        @media screen and (max-width: 1024px){
+            .xans-layout-mobileaction{display:none!important;}
+            .content_pc{display:none;}
+            .content_m img{width:100%;}
+            .content_m{font-size:0; position:relative;}
+            .btn_more{text-align:center; margin-bottom:70px;}
+            .btn_more a{font-size:20px; background-color:#b3b3b3; padding:10px 30px; border-radius:30px;font-family: 'Noto Sans KR', sans-serif;}
+            .sec1_obj2_m{position:absolute; left:0; top:0; width:100%;opacity:0; animation: sec1_ani1_m 12s ease infinite;}
+            @keyframes sec1_ani1_m{25%{opacity:1;} 50%{opacity:0;} 75%{opacity:1;} 100%{opacity:0;}}
+            .section2{display:none;}
+            .section2_m{display:block;}
+            .section2_swiper{padding:20px 10px; background-color:#f7f7f7;}
+            .image_wrap img{width:100%;}
+            .product_no{font-size:20px; text-align:center;}
+            .section3_swiper{padding:20px 0;}
+            .section4_swiper_m{padding:20px 10px;}
+            .section6{padding-bottom:1px;}
+        }
