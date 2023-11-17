@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap');
+body{font-family: 'Kanit', sans-serif; width: 100%;}
+@media screen and (min-width: 1025px) {
+  section{width: 100%; position: relative;}
+  .content_pc{position: relative; width: 100%;}
+  .content_pc img{width: 100%;}
+  .content_pc video{width: 100%;}
+  .content_m{display: none;}
+  .image_wrap img{width: 100%;}
+  .sec2_obj1{position: absolute; left: 0; top: 5%; width: 100%; opacity: 0;}
+  .sec2_obj1.on{animation: sec2_ani1 0.8s 0.3s ease-out forwards;}
+  .sec2_obj2{position: absolute; left: 0; top: 5%; width: 100%; opacity: 0;}
+  .sec2_obj2.on{animation: sec2_ani1 0.8s 0.8s ease-out forwards;}
+  @keyframes sec2_ani1 {100%{top: 0; opacity: 1;}}
+  .hover2_img{position:absolute; left:0; top:0; opacity:0;}
+  .section4{padding:100px 30px;}
+        
+}
