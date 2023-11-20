@@ -14,12 +14,19 @@ $(document).ready(function() {
     });
 
     new Swiper ('.section4_swiper', {
-        loop: true,
-        slidesPerView: 3,
+        loop: true,        
         speed:800,
         autoplay: {
             delay: 1500,
             disableOnInteraction: false,
+        },
+        breakpoints: {
+            1025: {
+                slidesPerView: 3,                
+            },
+            300: {
+                slidesPerView: 1,                
+            },
         },                
     });
 
@@ -27,6 +34,7 @@ $(document).ready(function() {
         loop: true,
         slidesPerView: 2,
         speed:800,
+        spaceBetween: '3%',
         autoplay: {
             delay: 2000,
             disableOnInteraction: false,
