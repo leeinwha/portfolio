@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500&display=swap');
-    	body{font-family: 'Noto Sans KR', sans-serif; background-color:#f7f7f7;}
-        a{text-decoration: none;}      
-        ul,li{list-style: none;}       
+    	body{font-family: 'Noto Sans KR', sans-serif; background-color:#f7f7f7;}              
         @media screen and (min-width: 1025px){
         	section{width:100%; min-width:1400px; position:relative;}
             .content_m{display:none;}
         	.content_pc{position:relative; width:100%; font-size:0;}            
         	.content_pc img{width:100%;}
-            .pin-spacer{background-color:#f7f7f7;}
+            .pin-spacer{background-color:#f7f7f7; width: 100%;}
 			.image_wrap img {width:100%;}
             .sec1_obj2{position:absolute; left:0; top:0; width:100%;opacity:0; animation: sec1_ani1 12s ease infinite;}
             @keyframes sec1_ani1{25%{opacity:1;} 50%{opacity:0;} 75%{opacity:1;} 100%{opacity:0;}}
-            .section2{width:100vw; height:75vh; background-color:#f7f7f7;}
+            .section2{height:75vh; background-color:#f7f7f7;}
             .section2_m{display:none;}
             .sec2_obj1{width:21%; margin:140px auto; opacity:0;}
             .sec2_obj2{width:46%; margin:0 auto;opacity:0;}
