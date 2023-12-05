@@ -48,19 +48,44 @@ $(function(){
     });
 
 
-    $('.section_swiper').slick({
-        autoplay:true,
-        autoplaySpeed:1500,
-        slidesToShow: 3,
-        pauseOnHover: true,
-        arrows: false,
-        responsive:[
-            {
-                breakpoint: 1024,
-                settings:{
-                    slidesToShow:1,
-                }
-            }
-        ]
-      });
+    new Swiper ('.section_swiper', {
+        loop: true,
+        slidesPerView: 3,
+		centeredSlides: true,
+        slidesOfsetBefore: 0,
+        spaceBetween: '10%',
+        effect : 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: -150,
+            depth: 300,
+            modifier: 0.9,
+            slideShadows : false,
+        },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },               
+    });
+
+    new Swiper ('.section_swiper_m',{
+        loop: true,
+        slidesPerView: 1,
+        centeredSlides : true,
+        slidesOffsetBefore: 0,
+        spaceBetween: '20%',        
+        speed: 1200,
+        effect : 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows : false
+        },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
+    });
 });

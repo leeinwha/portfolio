@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap');
+body{font-family: 'Kanit', sans-serif;}
+@media screen and (min-width: 1025px){
+  section{width: 100%; min-width: 1400px; position: relative; overflow: hidden;}
+  .product_no{font-size: 30px; font-weight: 200; text-align: center; color: #333;}
+  .content_pc{position: relative; width: 100%;}
+  .content_pc img{width: 100%;}
+  .content_m{display: none;}
+  .swiper-slide{position: relative;}  
+  .image_wrap img{width: 100%;}
+  .hover2_img{position: absolute; left: 0; top: 0; opacity: 0;}
+  .section_swiper{width: 95%; margin: 0 auto; padding: 50px 0;}
+
+  /* section1 */
+  .section1{overflow: hidden;}
+  .sec1_obj1{position: absolute; top: 5%; left: 0; width: 100%; opacity: 0; animation: sec1_ani1 1s 0.5s ease-out forwards;}
+  @keyframes sec1_ani1 {100%{top: 0; opacity: 1;}}
+
+  /* section2 */
+  .sec2_obj1{position: absolute; left: 0; top: 0; width: 100%; opacity: 0; animation: sec2_ani1 12s ease infinite;}
+  @keyframes sec2_ani1{25%{opacity: 1;} 50%{opacity: 0;} 75%{opacity: 1;} 100%{opacity: 0;}}
+
+  /* section3 */
+  .section3_swiper{padding: 50px 30px; overflow: hidden;}
+
+  /* section4 */  
+  .sec4_obj1{position: absolute; right: 70%; top: 0; width: 125%;}
+  .sec4_obj2{position: absolute; left: 0; top: 0; width: 100%;}
+  .section4_swiper{overflow: hidden; padding: 50px 30px;}
+  /* section5 */
+  .sec5_obj1{position: absolute; left: 70%; top: 0; width: 125%;}
+  .sec5_obj2{position: absolute; left: 0; top: 0; width: 100%;}
+  .section5_swiper{width: 60%; margin: 0 auto; padding: 50px 0; overflow: hidden;}
+
+  /* section6 */
+  .sec6_obj1{position: absolute; right: 70%; top: 0; width: 125%;}
+  .sec6_obj2{position: absolute; left: 0; top: 0; width: 100%;}
+  .section6_swiper{padding: 50px 0;}
+
+  /* section7 */
+  .sec7_obj1{position: absolute; left: 77%; top: 0; width: 125%;}
+  .sec7_obj2{position: absolute; left: 0; top: 0; width: 100%;}
+
+  /* section8 */
+  .sec8_obj1{position: absolute; right: 77%; top: 0; width: 125%;}
+  .sec8_obj2{position: absolute; left: 0; top: 0; width: 100%;}
+
+  /* section9 */
+  .sec9_obj1{position: absolute; left: 77%; top: 0; width: 125%;}
+  .sec9_obj2{position: absolute; left: 0; top: 0; width: 100%;}
+
+  /* section10 */
+  .section10_swiper{padding: 50px 30px; overflow: hidden;}
+}
+@media screen and (max-width: 1024px){
+  .content_pc{display: none;}
+  .content_m{position: relative;}
+  .content_m img{width: 100%;}
+  .image_wrap img{width: 100%;}
+  .product_no{font-size: 20px; text-align: center; color: #333;}
+  .hover2_img{position: absolute; left: 0; top: 0; opacity: 0;}
+
+  /* section2 */
+  .sec2_obj1_m{position: absolute; left: 0; top: 0; width: 100%; opacity: 0; animation: sec2_ani1 12s ease infinite;}
+  @keyframes sec2_ani1 {25%{opacity: 1;} 50%{opacity: 0;} 75%{opacity: 1;} 100%{opacity: 0;}}
+  .section3_swiper{padding: 50px 10px; overflow: hidden;}
+  .section4_swiper{padding: 50px 10px; overflow: hidden;}
+  .section5_swiper{padding: 50px 10px; overflow: hidden;}
+  .section6_swiper{padding: 50px 10px; overflow: hidden;}
+  .section10_swiper{padding: 50px 10px; overflow: hidden;}
+}
