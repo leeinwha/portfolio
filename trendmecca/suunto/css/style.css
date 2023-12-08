@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500&display=swap');
+.pin-spacer{padding:0 !important;}
+@media screen and (min-width: 1025px){
+  section{width: 100%; min-width: 1400px; overflow: hidden;}
+  .content_m{display: none;}
+  .content_pc{position: relative; width: 100%;}
+  .content_pc img, .content_pc video, .image_wrap img{width: 100%;}
+  .image_wrap1 img{width:80%;}
+
+  /* section1 */
+  .logo{position: absolute; left: 50%; top: 14%; transform: translateX(-50%); width: 25%; opacity: 0; animation: logo_ani 1s 0.5s ease-out forwards;}
+  @keyframes logo_ani {100%{top: 10%; opacity: 1;}}
+  .sec1_obj1{position: absolute; right: 15.5%; top: 38%; width: 30%; z-index: 3; opacity: 0; animation: object_ani 1s 1s ease-out forwards;}
+  .sec1_obj2{position: absolute; left: 50%; top: 38%; transform: translateX(-50%); width: 30%; z-index: 2; opacity: 0; animation: object_ani 1s 1.5s ease-out forwards;}
+  .sec1_obj3{position: absolute; left: 15.5%; top: 38%; width: 30%; z-index: 1; opacity: 0; animation: object_ani 1s 2s ease-out forwards;}
+  @keyframes object_ani {100%{top: 34%; opacity: 1;}}
+
+  /* section2 */
+  .section2{background-color: #e7e7e7; height: 100vh;}
+  .sec2_obj1{position: absolute; left: 50%; top: 220px; transform: translateX(-50%); width: 20%; transition: 0.5s; opacity: 0;}
+  .sec2_obj2{position: absolute; left: 50%; top: 370px; transform: translateX(-50%); width: 70%; transition: 0.5s; opacity: 0;}
+  .sec2_obj3{position: absolute; left: 50%; top: 530px; transform: translateX(-50%); width: 60%; transition: 0.5s; opacity: 0;}
+
+  /* section4 */
+  .sec4_obj1{position: absolute; left: 7.7%; bottom: 41%; width: 16%; transition: 0.3s;}
+  .sec4_obj1.on{animation: sec4_ani 1s ease-out infinite;}
+  .sec4_obj2{position: absolute; left: 30.7%; bottom: 41%; width: 16%; transition: 0.3s;}
+  .sec4_obj2.on{animation: sec4_ani 1s ease-out infinite;}
+  .sec4_obj3{position: absolute; right: 30.6%; bottom: 41%; width: 16%; transition: 0.3s;}
+  .sec4_obj3.on{animation: sec4_ani 1s ease-out infinite;}
+  .sec4_obj4{position: absolute; right: 7.5%; bottom: 41%; width: 16%; transition: 0.3s;}
+  .sec4_obj4.on{animation: sec4_ani 1s ease-out infinite;}
+  @keyframes sec4_ani{50%{bottom: 45%;}100%{bottom: 41%;}}
+
+  /* section5 */
+  .section5{background-color:#fbfbfb;}
+  .content_top{display:flex; margin-top:150px; column-gap:50px;}
+  .section5_swiper{overflow: hidden; max-width:75%;  margin:100px auto;}
+}
