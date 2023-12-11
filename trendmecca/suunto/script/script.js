@@ -63,7 +63,7 @@ $(document).ready(function() {
         $('.sec4_obj4').removeClass('on')
     });    
 
-    new Swiper ('.section5_swiper', {
+    new Swiper ('.slide_swiper', {
         loop: true,        
         speed:800,
         autoplay: {
@@ -79,5 +79,83 @@ $(document).ready(function() {
             },
         },                
     });
+
+    new Swiper ('.fade_swiper', {
+        loop: true,        
+        speed:800,
+        centeredSlides : true,
+        effect : 'fade',
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1025: {
+                slidesPerView: 1,                
+            },
+            300: {
+                slidesPerView: 1,                
+            },
+        },                
+    });
+
+    new Swiper ('.section7_swiper', {
+        loop: true,        
+        speed:800,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            1025: {
+                slidesPerView: 2,                
+            },
+            300: {
+                slidesPerView: 1,                
+            },
+        },                
+    });
+
+    $('#yearend_list a').click(function(e) {
+		e.preventDefault();
+		var curLink = $(this);
+		var scrollPoint = $(curLink.attr('href')).position().top;
+		$('body,html').animate({ scrollTop: scrollPoint }, 750); 
+	});
+
+    $(document).bind("scroll", onScroll);
+    
+    //smoothscroll
+    $('#yearend_list a[href^="#"]').click(function (e) {
+        e.preventDefault();        
+        $('#yearend_list a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 800, 'swing', function () {
+            window.location.hash = target;
+            $(document).bind("scroll", onScroll);
+        });
+    });    
+    
+    function onScroll(event){
+        var scrollPos = $(document).scrollTop();
+        $('#yearend_list a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top + 0 <= scrollPos && refElement.position().top + 0 + refElement.height() > scrollPos) {
+                $('#yearend_list a').removeClass("active");
+                currLink.addClass("active");
+            }else{
+                currLink.removeClass("active");
+            }
+        });
+    }
 
 });

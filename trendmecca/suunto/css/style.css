@@ -6,6 +6,7 @@
   .content_pc{position: relative; width: 100%;}
   .content_pc img, .content_pc video, .image_wrap img{width: 100%;}
   .image_wrap1 img{width:80%;}
+  .slide_swiper{overflow: hidden;}
 
   /* section1 */
   .logo{position: absolute; left: 50%; top: 14%; transform: translateX(-50%); width: 25%; opacity: 0; animation: logo_ani 1s 0.5s ease-out forwards;}
@@ -36,4 +37,16 @@
   .section5{background-color:#fbfbfb;}
   .content_top{display:flex; margin-top:150px; column-gap:50px;}
   .section5_swiper{overflow: hidden; max-width:75%;  margin:100px auto;}
+
+  /* section6 */
+  .section6{background-image: url('../img/section6_bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;}
+
+  /* section7 */
+  .prod1{position: absolute; left: 15%; top: 2.5%; width: 32%;}
+  .prod2{position: absolute; right: 15%; top: 30%; width: 38%; overflow: hidden;}
+}
+@media screen and (max-width: 1024px){
+  .content_pc{display: none;}
+  .content_m{position: relative;}
+  .content_m img{width: 100%;}
 }
