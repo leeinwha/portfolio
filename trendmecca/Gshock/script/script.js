@@ -28,6 +28,42 @@ $(document).ready(function() {
         slidesPerView: 2,
       }
     }
-  });  
+  });
+  
+  new Swiper ('.box1_swiper', {
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.box1_swiper .swiper-button-next',
+      prevEl: '.box1_swiper .swiper-button-prev',
+    },
+  });
+
+  new Swiper ('.box2_swiper', {
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.box2_swiper .swiper-button-next',
+      prevEl: '.box2_swiper .swiper-button-prev',
+    },
+  });
+
+  new Swiper ('.box3_swiper', {
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.box3_swiper .swiper-button-next',
+      prevEl: '.box3_swiper .swiper-button-prev',
+    },
+  });
+
+  new Swiper ('.box4_swiper', {
+    loop: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.box4_swiper .swiper-button-next',
+      prevEl: '.box4_swiper .swiper-button-prev',
+    },
+  });
 
 });
