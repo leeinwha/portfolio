@@ -11,16 +11,16 @@ header .content_pc .header_inner .basket a{display: block; background-image: url
 header .content_pc .header_inner .basket a:hover{display: block; background-image: url('./img/btn_lf_ov.png'); width: 76px; height: 22px;}
 
 /* === section1 === */
-.section1 .swiper-container{overflow: hidden; position: relative; padding-bottom: 3%;}
+.section1 .swiper-container{overflow: hidden; position: relative; padding-bottom: 3%; background-color: #f7f7f7;}
 .section1 .swiper-slide img{width: 100%;}
 .section1 .swiper-button-prev{background-image: url('./img/btn_left.png'); text-indent: -9999px; width: 50px;height: 50px; top: 60%; left: 3%;}
 .section1 .swiper-button-next{background-image: url('./img/btn_right.png'); text-indent: -9999px; width: 50px;height: 50px; top: 60%; right: 3%;}
-.section1 .swiper-pagination-bullet{width: 90px; height: 10px; border-radius: 0;}
+.section1 .swiper-pagination-bullet{width: 90px; height: 8px; border-radius: 0;}
 .section1 .swiper-pagination-bullet-active{background-color:#f56c11 ;}
 .section1 .swiper-pagination {bottom: 0!important;}
 
 /* === section2 === */
-.section2 {padding: 80px 0;}
+.section2 {padding: 80px 0; background-color: #f7f7f7;}
 .section2 .info h2{text-align: center; font-size: 30px; font-weight: bold;}
 .section2 .info p{margin-top: 40px; text-align: center; color: #6a6663; font-size: 20px; line-height: 35px;}
 .section2 .info p .sub_txt{font-weight: bold;}
@@ -49,4 +49,15 @@ header .content_pc .header_inner .basket a:hover{display: block; background-imag
   .header_inner_m .mobile_menu > .menu_list .depth2 ul > li a {font-size: 18px;color: #333230; padding: 30px;}
   .header_inner_m .mobile_menu > .menu_list .depth2 ul > li:first-child a::after{content: ''; width: 1px; height: 60px; background: #ccc; position: absolute; right: 50%; top: 50%; transform: translateY(-50%);}
   .header_inner_m .mobile_menu > .menu_list .depth2 ul > li a img{width: 17px;}
+
+  /* === section1 === */
+  .section1 .swiper-pagination-bullet{width: 50px; height: 5px;}
+  .section1 .swiper-pagination {bottom: 0!important;}
+
+  /* === section2 === */
+.section2 {padding: 40px 25px;}
+.section2 .info h2{font-size: 25px;}
+.section2 .info p{margin-top: 30px;  font-size: 18px; line-height: 30px;}
+
+  
 }
