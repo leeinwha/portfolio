@@ -8,15 +8,15 @@ $(function(){
 
   $('.m_menu_btn').click(function(){
     $('.cover').fadeIn(200);
-    $('.mobile_menu').animate({'left':0},500);
-    $('body,html').css('overflow','hidden');
+    $('.mobile_menu').animate({'left':0},500);    
   });
   $('.cover').click(function(){
     $('.cover').fadeOut(200);
-    $('.mobile_menu').animate({'left':'-100%'},500);
-    $('body,html').css('overflow','auto');
+    $('.mobile_menu').animate({'left':'-100%'},500);    
   });
-
+  $('.btn_family').click(function(){
+    $('.family_list').toggle();
+});
   new Swiper ('.swiper-container',{
     loop: true,
     speed: 1000,
@@ -61,6 +61,13 @@ $(function(){
     let pre_src=$(this).find('img').attr('src');
     let next_src=pre_src.replace('ov','ot');
   $(this).find('img').attr('src',next_src);
+  });
+
+  $('.section4 .sns_live li a').mouseenter(function(){
+    $(this).find('.cover_img').stop().fadeIn(100);
+  });
+  $('.section4 .sns_live li a').mouseleave(function(){
+    $(this).find('.cover_img').stop().fadeOut(100);
   });
   
 });

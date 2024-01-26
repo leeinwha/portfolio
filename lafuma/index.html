@@ -261,65 +261,163 @@
         </ul>
       </div>
     </section>
-    <style>
-      .section4 .section_title{background-color: #e7e7e7; padding: 70px 0;}
-      .section4 .section_title p{font-size: 30px; color: #2a2b25; text-align: center;}
-      .section4 .section_title p span{color: #f6741e;}
-      .section4 .sns_live{display: flex; width: 100%;}
-      .section4 .sns_live li {width: 25%; margin-bottom: -3px;}
-      .section4 .sns_live li img {width: 100%;}
-      @media screen and ( max-width : 767px ) {
-        .section4 .sns_live{flex-wrap: wrap;}
-        .section4 .sns_live li {width: 50%;}
-      }
-    </style>
+    
     <section class="section4">
-      <div class="section_title"><p><span>LAPUMA</span> SNS LIVE</p></div>
+      <div class="section_title"><p><span>LAFUMA</span> SNS LIVE</p></div>
       <ul class="sns_live">
         <li>
           <a href="javascript:;">
-            <img src="img/04_blog.jpg" alt="sns blog">            
+            <img src="img/04_blog.jpg" alt="sns blog">
+            <div class="cover_img">
+              <img src="img/cover_blog.png" alt="sns blog cover image">
+            </div>
           </a>
         </li>
         <li>
           <a href="javascript:;">
-            <img src="img/03_facebook.jpg" alt="sns facebook">            
+            <img src="img/03_facebook.jpg" alt="sns facebook">
+            <div class="cover_img">
+              <img src="img/cover_facebook.png" alt="sns facebook cover image">
+            </div>
           </a>
         </li>
         <li>
           <a href="javascript:;">
-            <img src="img/02_blog.jpg" alt="sns blog">            
+            <img src="img/02_blog.jpg" alt="sns blog">
+            <div class="cover_img">
+              <img src="img/cover_blog.png" alt="sns blog cover image">
+            </div>            
           </a>
         </li>
         <li>
           <a href="javascript:;">
-            <img src="img/01_facebook.jpg" alt="sns facebook">            
+            <img src="img/01_facebook.jpg" alt="sns facebook">
+            <div class="cover_img">
+              <img src="img/cover_facebook.png" alt="sns facebook cover image">
+            </div>            
           </a>
         </li>
       </ul>
       <ul class="sns_live">
         <li>
           <a href="javascript:;">
-            <img src="img/05_blog.jpg" alt="sns blog">            
+            <img src="img/05_blog.jpg" alt="sns blog">
+            <div class="cover_img">
+              <img src="img/cover_blog.png" alt="sns blog cover image">
+            </div>            
           </a>
         </li>
         <li>
           <a href="javascript:;">
-            <img src="img/04_facebook.jpg" alt="sns facebook">            
+            <img src="img/04_facebook.jpg" alt="sns facebook">
+            <div class="cover_img">
+              <img src="img/cover_facebook.png" alt="sns facebook cover image">
+            </div>            
           </a>
         </li>
         <li>
           <a href="javascript:;">
-            <img src="img/03_blog.jpg" alt="sns blog">            
+            <img src="img/03_blog.jpg" alt="sns blog">
+            <div class="cover_img">
+              <img src="img/cover_blog.png" alt="sns blog cover image">
+            </div>            
           </a>
         </li>
         <li>
           <a href="javascript:;">
-            <img src="img/02_facebook.jpg" alt="sns facebook">            
+            <img src="img/02_facebook.jpg" alt="sns facebook">
+            <div class="cover_img">
+              <img src="img/cover_facebook.png" alt="sns facebook cover image">
+            </div>            
           </a>
         </li>
       </ul>
     </section>
   </main>
+  <style>
+    footer{padding: 40px 0;}
+    footer .copy{color: #888; font-size: 14px;}
+    footer .footer_inner{display: flex; justify-content: space-between;}
+    footer .footer_inner .util{display: flex; margin-left: -15px;}
+    footer .footer_inner .util li{position: relative; padding: 0 15px;}
+    footer .footer_inner .util li::before{content: ''; width: 5px; height: 5px; background-image: url('./img/dot.png'); position: absolute; left: 0; top: 20%; transform: translateY(-50%);}
+    footer .footer_inner .util li a{color: #666; font-size: 12px; display: block; white-space: nowrap;}
+    footer .footer_inner .util li:first-child::before { display: none;}  
+    footer .footer_inner .com_family{display: flex; justify-content: center;}
+    footer .footer_inner .com_family .com{ display: flex; align-items: center; padding: 0 20px;}
+    footer .footer_inner .com_family .com p{ color: #222; font-size: 14px; margin-left: 10px;}
+    footer .footer_inner .com_family .btn_family{width: 160px; height: 30px; background-color: #fff; border: 1px solid #222; font-size: 12px; text-align: left; text-indent: 6px; cursor: pointer; position: relative;}
+    footer .footer_inner .com_family .btn_family::after{content: ''; background-image: url('./img/m_family.png'); width: 18px; height: 15px; position: absolute; right: 0; top: 35%; background-size: 9px 7px; background-repeat: no-repeat;}
+    footer .footer_inner .com_family .btn_family .family_list{position: absolute; left: 50%; top: -152px; transform: translateX(-50%); width: 160px; background-color: #fff; border: 1px solid #222; box-sizing: border-box; display: none;}
+    footer .footer_inner .com_family .btn_family .family_list li a{display: block; width: 160px; line-height: 30px; color: #666;}
+    footer .footer_inner .com_family .btn_family .family_list li a:hover{color: #222; background-color: #eee;}
+    @media screen and ( max-width : 767px ) {
+      footer{padding: 0;}
+      footer .m_footer_inner .m_util li{border-bottom: 1px solid #cbcbcb; position: relative;}
+      footer .m_footer_inner .m_util li a{display: block; width: 100%; line-height: 50px; font-size: 14px; color: #47443d; text-indent: 20px;}
+      footer .m_footer_inner .m_util li a::after{content: ''; background-image: url('./img/m_arrow.gif'); width: 11px; height: 20px; position: absolute; right: 30px; top: 50%; transform: translateY(-50%);}
+      footer .m_footer_inner .m_family{ width: 100%; padding: 25px 0; background-color: #eee;}
+      footer .m_footer_inner .m_family .com{display: flex; justify-content: center; column-gap: 10px;}
+      footer .m_footer_inner .m_family .com p{color: #222; font-size: 14px;}
+    }
+  </style>
+  <footer>
+    <div class="content_pc">
+      <div class="footer_inner">
+        <ul class="util">
+          <li><a href="javascript:;">MEMBERSHIP CLUB</a></li>
+          <li><a href="javascript:;">HELP DESK</a></li>
+          <li><a href="javascript:;">FACEBOOL</a></li>
+          <li><a href="javascript:;">BLOG</a></li>
+          <li><a href="javascript:;">LF MALL</a></li>
+        </ul>
+        <div class="com_family">
+          <a href="index.html" class="com">
+            <img src="img/france.jpg" alt="france image">
+            <p>LAFUMA.COM</p>
+          </a>
+          <button type="button" class="btn_family">
+            FAMILY SITE
+            <ul class="family_list">
+              <li><a href="javascript:;">FAMILY SITE</a></li>
+              <li><a href="javascript:;">TNGT</a></li>
+              <li><a href="javascript:;">DAKS</a></li>
+              <li><a href="javascript:;">HAZZYS</a></li>
+              <li><a href="javascript:;">IL CORSO</a></li>
+            </ul>
+          </button>
+        </div>
+      </div>
+      <p class="copy">copyright &copy; 1990-2024 lf all rights reserved.</p>
+    </div>
+    <div class="content_m">
+      <div class="m_footer_inner">
+        <ul class="m_util">
+          <li><a href="javascript:;">MEMBERSHIP CLUB</a></li>
+          <li><a href="javascript:;">HELP DESK</a></li>
+          <li><a href="javascript:;">FACEBOOL</a></li>
+          <li><a href="javascript:;">BLOG</a></li>
+          <li><a href="javascript:;">LF MALL</a></li>
+        </ul>
+        <div class="m_family">
+          <a href="index.html" class="com">
+            <img src="img/france.jpg" alt="france image">
+            <p>LAFUMA.COM</p>
+          </a>
+          <button type="button" class="btn_family">
+            FAMILY SITE
+            <ul class="family_list">
+                <li><a href="#">FAMILY SITE</a></li>
+                <li><a href="#">TNGT</a></li>
+                <li><a href="#">DAKS</a></li>
+                <li><a href="#">HAZZYS</a></li>
+                <li><a href="#">IL CORSO</a></li>
+            </ul>
+          </button>
+          <p class="m_copy">copyright &copy; 1990-2021 lf all rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
