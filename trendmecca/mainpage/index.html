@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="./script/script.js"></script>
+  <title>TimeMecca</title>
+</head>
+<style>  
+  #header .header_inner .category_menu{height: 60px; border: 1px solid; display: flex;}
+  #header .header_inner .category_menu .cover{width: 100%; height: 100vh; background-color: rgba(0,0,0,0.4); display: none;}
+  #header .header_inner .category_menu .cover.on{display: block;}
+  #header .header_inner .category_menu .category{display: flex; justify-content: space-between; width: 100%; align-items: center;}
+  #header .header_inner .category_menu .category .sectionLeft{display: flex; width: 60%; border: 1px solid red;}
+  #header .header_inner .category_menu .category .sectionLeft li{position: relative; width: 12.5%; text-align: center; border: 1px solid greenyellow;}
+  #header .header_inner .category_menu .category .sectionLeft li a{display: block; width: 100%; padding: 15px 0; font-size: 1rem; color: #1a1a1a; transition: 0.1s; }
+  #header .header_inner .category_menu .category .sectionLeft li a:hover{color: #d60005; font-weight: 600;}
+  #header .header_inner .category_menu .category .sectionLeft li .btn_menu span{display: block; width: 15px; height: 2px; background-color: #333; position: absolute; top:50%; transform: translateY(-50%);}
+  #header .header_inner .category_menu .category .sectionLeft li .btn_menu span::before{content: ''; width: 15px; height: 2px; background-color: #333; position: absolute; top: -5px; left: 0; transition: 0.5s;}
+  #header .header_inner .category_menu .category .sectionLeft li .btn_menu span::after{content: ''; width: 15px; height: 2px; background-color: #333; position: absolute; top: 5px; left: 0; transition: 0.5s;}
+  #header .header_inner .category_menu .category .sectionRight{display: flex; column-gap: 20px;}
+  #header .header_inner .category_menu .category .sectionRight li a{font-size: 0.9rem; color: #1a1a1a; padding: 3px 20px; border: 1px solid #ddd; border-radius: 20px; transition: 0.2s;}
+  #header .header_inner .category_menu .category .sectionRight li a:hover{background-color: #d60005; color: #eee; border: 1px solid #d60005;}
+</style>
+<body>
+  <header id="header">
+    <div class="header_inner">
+      <div class="header_top">
+        <a href="./index.html" class="top_logo">
+          <img src="./img/header/timemecca_logo.png" alt="main logo">
+        </a>
+        <div class="top_search_box">
+          <input type="text" class="search_box">
+          <button type="button" class="btn_search"><img src="./svg/icon_search.svg" alt="search button"></button>
+        </div>
+        <div class="top_mypage">
+          <a href="javascript:;"><img src="./svg/icon_recent.svg" alt="recent icon"></a>
+          <a href="javascript:;"><img src="./svg/icon_user.svg" alt="user icon"></a>
+          <a href="javascript:;"><img src="./svg/icon_headphone.svg" alt="headphone icon"></a>
+          <a href="javascript:;"><img src="./svg/icon_cart.svg" alt="cart icon"></a>
+        </div>
+      </div>
+      <div class="category_menu">
+        <div class="category">
+          <ul class="sectionLeft">
+            <li><a href="javascript:;" title="menu button" class="btn_menu"><span></span><strong>카테고리</strong></span></a></li>
+            <li><a href="javascript:;" title="반값세일"><strong>반값 SALE</strong></a></li>
+            <li><a href="javascript:;" title="신상품"><strong>NEW</strong></a></li>
+            <li><a href="javascript:;" title="베스트상품"><strong>BEST</strong></a></li>
+            <li><a href="javascript:;" title="기획전">기획전</a></li>
+            <li><a href="javascript:;" title="이벤트게시판">이벤트</a></li>
+            <li><a href="javascript:;" title="쿠폰">쿠폰존</a></li>
+            <li><a href="javascript:;" title="중고상품">중고장터</a></li>
+          </ul>
+          <ul class="sectionRight">
+            <li><a href="javascript:;" title="브랜드">브랜드</a></li>
+            <li><a href="javascript:;" title="정품인증">정품보장</a></li>
+            <li><a href="javascript:;" title="AS">시계수리연구소</a></li>
+          </ul>
+        </div>
+      </div>      
+    </div>
+  </header>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500&display=swap');
+body{font-family: 'Noto Sans KR', sans-serif;}
+@media screen and (min-width: 1025px){
+  body{width:100%; min-width:1400px; max-width: 1800px; margin: 0 auto;}
+  #header {width: 100%; margin: 0 auto; background-color: #fff;}
+  #header .header_inner{ width: 90%; margin: 0 auto; }
+  #header .header_inner .header_top{display: flex; justify-content: space-between; column-gap: 10%; align-items: center; height: 100px; border: 1px solid yellow;}
+  #header .header_inner .header_top .top_logo{width:20%; border: 1px solid red;}
+  #header .header_inner .header_top .top_logo img{width: 100%;}
+  #header .header_inner .header_top .top_search_box{width: 60%; text-align: center; position: relative;}
+  #header .header_inner .header_top .top_search_box .search_box{width: 65%; height: 40px; border: none; border-bottom: 1px solid #222; color: #2e2e2e; font-size: 1.3rem;}
+  #header .header_inner .header_top .top_search_box .btn_search{position: absolute; right: 17%; top: 6px;}
+  #header .header_inner .header_top .top_mypage{width: 20%; display: flex; justify-content: space-between;  border: 1px solid green;}
+}    
