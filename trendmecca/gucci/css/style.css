@@ -5,7 +5,7 @@ body{font-family: 'Noto Sans KR', sans-serif; background-color:#f7f7f7;}
     .content_m{display: none;}
     .content_pc{position: relative; width: 100%;}
     .content_pc img{width: 100%;}
-    .section_swiper{width:95%; margin: 0 auto;}
+    .section_swiper{width:95%; margin: 0 auto; overflow: hidden;}
 
     /* section1 */
     .sec1_obj1{position: absolute; left: 0; top: 0; width: 100%; opacity: 0; animation: sec1_ani1 1.8s 0.5s ease-out forwards;}
