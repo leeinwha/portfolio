@@ -1,11 +1,20 @@
 @media screen and (min-width: 1025px){
   body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
+  .content_m{display: none;}
   .main_benner .mainslide_swiper{overflow: hidden; position: relative;}
   .main_benner .mainslide_swiper .swiper-button-next{top: 50% !important; right:2% !important; width: 60px !important; height: 60px !important; border: 1px solid #aaa; border-radius: 100px; background-color: rgba(220, 220, 220, 0.7);}
   .main_benner .mainslide_swiper .swiper-button-next:after{content: '' !important; width: 20px; height: 20px; border-top: 2px solid #666; border-right: 2px solid #666; transform: rotate(45deg); position: absolute; right: 38%;}
   .main_benner .mainslide_swiper .swiper-button-prev{top: 50% !important; left:2% !important; width: 60px !important; height: 60px !important; border: 1px solid #aaa; border-radius: 100px; background-color: rgba(220, 220, 220, 0.7);}
   .main_benner .mainslide_swiper .swiper-button-prev:after{content: '' !important; width: 20px; height: 20px; border-bottom: 2px solid #666; border-left: 2px solid #666; transform: rotate(45deg); position: absolute; left: 38%;}
   .main_benner .mainslide_swiper .swiper-pagination{position: absolute; bottom: 5% !important;}
+  .main_benner .mainslide_swiper .swiper-pagination-bullet-active{background:#777 !important;}
+  .main_benner .mainslide_swiper .swiper-wrapper .swiper-slide .image_wrap img{width: 100%; position: relative;}
+}@media screen and (max-width: 1024px){
+  .content_pc{display: none;}
+  .main_benner .mainslide_swiper{overflow: hidden; position: relative;}
+  .main_benner .mainslide_swiper .swiper-button-next{display: none;}
+  .main_benner .mainslide_swiper .swiper-button-prev{display: none;}
+  .main_benner .mainslide_swiper .swiper-pagination{position: absolute; bottom: 4% !important;}
   .main_benner .mainslide_swiper .swiper-pagination-bullet-active{background:#777 !important;}
   .main_benner .mainslide_swiper .swiper-wrapper .swiper-slide .image_wrap img{width: 100%; position: relative;}
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/mdpick_style.css">
+  <title></title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  @media screen and (min-width: 1025px){
+    body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
+    .content_m{display: none;}
+    .mdpick{padding: 50px;}
+    .mdpick .main_title{font-family: 'Noto Sans KR', sans-serif; font-size: 2vw; padding-bottom: 50px;}
+    .mdpick .main_title span{font-weight: 700;}
+    .mdpick .best_product_list{display: flex; column-gap: 20px;}
+    .mdpick .best_product_list .best_product{width: 33.3%; position: relative;}
+    .mdpick .best_product_list .best_product img{width: 100%;}
+    .mdpick .best_product_list .best_product .label{position: absolute; left: 7%; bottom: 10%; color: #444;}
+    .mdpick .best_product_list .best_product .label h2{font-family: 'Noto Sans KR', sans-serif; font-size: 20px; font-weight: 700;}
+    .mdpick .best_product_list .best_product .label p{font-family: 'Noto Sans KR', sans-serif; font-size: 18px; color: #888; font-weight: 600; padding: 20px 0; margin-bottom: 30%;}
+    .mdpick .best_product_list .best_product .label span{font-family: 'Noto Sans KR', sans-serif; font-size: 18px; font-weight: 600; transition: 0.5s; opacity: 0;}
+    .mdpick .best_product_list .best_product:hover .label span{opacity: 1;}
+  }@media screen and (max-width: 1024px){
+    .content_pc{display: none;}
+  }
+</style>
+<body>
+  <section class="mdpick">
+    <h1 class="main_title">타임메카 <span>MD 추천브랜드</span></h1>
+    <div class="best_product_list">
+      <a href="javascript:;" title="casio" class="best_product">
+        <img src="./img/mdpick/mdpick_casio.jpg" alt="casio" class="content_pc">
+        <img src="./img/mdpick/mdpick_casio_m.jpg" alt="casio_m" class="content_m">
+        <div class="label">
+          <h2>국민시계 카시오</h2>
+          <p>9,900원 부터</p>
+          <span>더보기 +</span>
+        </div>
+      </a>
+      <a href="javascript:;" title="montblanc" class="best_product">
+        <img src="./img/mdpick/mdpick_montblanc.jpg" alt="montblanc" class="content_pc">
+        <img src="./img/mdpick/mdpick_montblanc_m.jpg" alt="montblanc_m" class="content_m">
+        <div class="label">
+          <h2>남자선물 No.1 몽블랑</h2>
+          <p>#지갑 #벨트 #가방</p>
+          <span>더보기 +</span>
+        </div>
+      </a>
+      <a href="javascript:;" title="valkyrie" class="best_product">
+        <img src="./img/mdpick/mdpick_valkyrie.jpg" alt="valkyrie" class="content_pc">
+        <img src="./img/mdpick/mdpick_valkyrie_m.jpg" alt="valkyrie_m" class="content_m">
+        <div class="label">
+          <h2>실물깡패 발키리</h2>
+          <p>#남성/여성 시계 추천</p>
+          <span>더보기 +</span>
+        </div>
+      </a>
+    </div>
+  </section>
+</body>
+</html>
