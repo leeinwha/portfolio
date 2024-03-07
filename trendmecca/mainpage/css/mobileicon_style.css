@@ -1,0 +1,11 @@
+@media screen and (min-width: 1025px){
+  body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
+  .mobile_icon{display: none;}
+  
+}@media screen and (max-width: 1024px){  
+  .mobile_icon{padding: 20px;}
+  .mobile_icon .icon_list{display: flex; flex-wrap: wrap; column-gap: 4%;}
+  .mobile_icon .icon_list li{width: 16.8%; margin-bottom: 10px;}  
+  .mobile_icon .icon_list li a img{width: 100%;}
+  .mobile_icon .icon_list li a p{font-family: 'Noto Sans KR', sans-serif; font-size: 12px; color: #999; text-align: center; padding: 10px 0;}
+}

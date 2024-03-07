@@ -1,0 +1,33 @@
+@media screen and (min-width: 1025px){
+  body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
+  .content_m{display: none;}
+  .mdpick{padding: 50px;}
+  .mdpick .main_title{font-family: 'Noto Sans KR', sans-serif; font-size: 30px; padding-bottom: 50px;}
+  .mdpick .main_title span{font-weight: 700;}
+  .mdpick .best_product_list{display: flex; column-gap: 20px;}
+  .mdpick .best_product_list .best_product{width: 33.3%; position: relative;}
+  .mdpick .best_product_list .best_product img{width: 100%;}
+  .mdpick .best_product_list .best_product .label{position: absolute; left: 7%; bottom: 10%; color: #444;}
+  .mdpick .best_product_list .best_product .label h2{font-family: 'Noto Sans KR', sans-serif; font-size: 20px; font-weight: 700;}
+  .mdpick .best_product_list .best_product .label p{font-family: 'Noto Sans KR', sans-serif; font-size: 18px; color: #888; font-weight: 600; padding: 20px 0; margin-bottom: 30%;}
+  .mdpick .best_product_list .best_product .label span{font-family: 'Noto Sans KR', sans-serif; font-size: 18px; font-weight: 600; transition: 0.5s; opacity: 0;}
+  .mdpick .best_product_list .best_product:hover .label span{opacity: 1;}
+  .strip_banner_m{display: none;}
+  .strip_banner{width: 100%; overflow: hidden;}
+  .strip_banner a{width: 100%; }
+  .strip_banner a img{width: 200%; animation: banner_ani 10s linear infinite;}
+  @keyframes banner_ani{100%{transform: translateX(-50%);}}
+}@media screen and (max-width: 1024px){
+  .content_pc{display: none;}
+  .mdpick{padding: 20px;}
+  .mdpick .main_title{font-size: 25px; font-family: 'Noto Sans KR', sans-serif; padding-bottom: 20px;}
+  .mdpick .main_title span{font-weight: 700;}
+  .mdpick .best_product_list{display: flex; column-gap: 10px;}
+  .mdpick .best_product_list .best_product{width: 33.3%; position: relative;}
+  .mdpick .best_product_list .best_product img{width: 100%;}
+  .mdpick .best_product_list .best_product .label h2{font-family: 'Noto Sans KR', sans-serif; font-size: 15px; font-weight: 600; color: #444;}
+  .mdpick .best_product_list .best_product .label p{font-family: 'Noto Sans KR', sans-serif; font-size: 13px; color: #999; font-weight: 500; padding: 10px 0;}
+  .mdpick .best_product_list .best_product .label span , .strip_banner{display: none;}
+  .strip_banner_m{width: 100%;}
+  .strip_banner_m a img{width: 100%;}    
+}

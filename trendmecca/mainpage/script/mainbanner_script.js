@@ -23,4 +23,4 @@ $(document).ready(function () {
         prevEl: '.mainslide_swiper .swiper-button-prev'
     },
   });
-})
+});

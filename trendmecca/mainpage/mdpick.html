@@ -7,26 +7,6 @@
   <link rel="stylesheet" href="./css/mdpick_style.css">
   <title></title>
 </head>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
-  @media screen and (min-width: 1025px){
-    body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
-    .content_m{display: none;}
-    .mdpick{padding: 50px;}
-    .mdpick .main_title{font-family: 'Noto Sans KR', sans-serif; font-size: 2vw; padding-bottom: 50px;}
-    .mdpick .main_title span{font-weight: 700;}
-    .mdpick .best_product_list{display: flex; column-gap: 20px;}
-    .mdpick .best_product_list .best_product{width: 33.3%; position: relative;}
-    .mdpick .best_product_list .best_product img{width: 100%;}
-    .mdpick .best_product_list .best_product .label{position: absolute; left: 7%; bottom: 10%; color: #444;}
-    .mdpick .best_product_list .best_product .label h2{font-family: 'Noto Sans KR', sans-serif; font-size: 20px; font-weight: 700;}
-    .mdpick .best_product_list .best_product .label p{font-family: 'Noto Sans KR', sans-serif; font-size: 18px; color: #888; font-weight: 600; padding: 20px 0; margin-bottom: 30%;}
-    .mdpick .best_product_list .best_product .label span{font-family: 'Noto Sans KR', sans-serif; font-size: 18px; font-weight: 600; transition: 0.5s; opacity: 0;}
-    .mdpick .best_product_list .best_product:hover .label span{opacity: 1;}
-  }@media screen and (max-width: 1024px){
-    .content_pc{display: none;}
-  }
-</style>
 <body>
   <section class="mdpick">
     <h1 class="main_title">타임메카 <span>MD 추천브랜드</span></h1>
@@ -58,7 +38,13 @@
           <span>더보기 +</span>
         </div>
       </a>
-    </div>
+    </div>    
   </section>
+  <div class="strip_banner">
+    <a href="javascript:;"><img src="./img/mdpick/strip_banner.jpg" alt="app down banner"></a>
+  </div>
+  <div class="strip_banner_m">
+    <a href="javascript:;"><img src="./img/mdpick/strip_banner_m.jpg" alt="app down banner mobile"></a>
+  </div>
 </body>
 </html>
