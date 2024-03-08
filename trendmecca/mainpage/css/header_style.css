@@ -59,6 +59,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
   #header .category_menu .sub_category .sub_category_inner .cate_list .list .RightsubCate .Rightcate_list li:hover img{transform: scale(1.1);}
 }@media screen and (max-width: 1024px){
   #header {width: 100%; margin: 0 auto; height: 60px; background-color: #fff;}
+  #header.on{position: fixed; z-index: 10;}
   #header .category_menu{display: none;}
   #header .header_top{display: flex; justify-content: space-between; width: 90%; margin: 0 auto; height: 60px; align-items: center;}
   #header .header_top .top_logo{width:30%;}

@@ -19,4 +19,16 @@ $(function(){
     $('.sub_category_inner > .index_list > li').removeClass('active');
     $(this).addClass('active');
   });
+
+  $(window).resize(function() {
+    if($(window).width() > 1024) {
+      
+    
+    } else {
+    
+    }
+  });
+  
+
+
 });
