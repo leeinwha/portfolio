@@ -2,18 +2,18 @@
 body{font-family: 'Noto Sans KR', sans-serif;}
 @media screen and (min-width: 1025px){
   body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
-  #header {width: 100%; margin: 0 auto; background-color: #fff;}  
+  .cover{width: 100%; height: 100vh; background-color: rgba(0,0,0,0.4); display: none; position: absolute; z-index: 2;}
+  .cover.on{display: block;}
+  #header {width: 100%; margin: 0 auto; background-color: #fff;}
+  #header.fixed{position: fixed; top: 0;left: 0;right: 0;z-index: 15; margin: 0 auto; border-bottom: 1px solid #e8e8e8; transform: translateY(-95px); background-color: #fff;}  
   #header .header_top{display: flex; justify-content: space-between; column-gap: 10%; align-items: center; height: 100px; width: 90%; margin: 0 auto;}
   #header .header_top .top_logo{width:20%;}
   #header .header_top .top_logo img{width: 100%;}
   #header .header_top .top_search_box{width: 60%; text-align: center; position: relative;}
   #header .header_top .top_search_box .search_box{width: 65%; height: 40px; border: none; border-bottom: 1px solid #222; color: #2e2e2e; font-size: 1.3rem; font-family: 'Noto Sans KR', sans-serif;}
   #header .header_top .top_search_box .btn_search{position: absolute; right: 17%; top: 6px;}
-  #header .header_top .top_mypage{width: 20%; display: flex; justify-content: space-between;}
-  #header .category_menu{height: 50px;}
-  .cover{width: 100%; height: 100vh; background-color: rgba(0,0,0,0.4); display: none; position: absolute; z-index: 2;}
-  .cover.on{display: block;}
-  #header .category_menu .category{display: flex; justify-content: space-between; width: 90%; margin: 0 auto; align-items: center;}
+  #header .header_top .top_mypage{width: 20%; display: flex; justify-content: space-between;}  
+  #header .category_menu .category{display: flex; justify-content: space-between; width: 90%; height: 70px; margin: 0 auto; align-items: center;}  
   #header .category_menu .category .sectionLeft{display: flex; width: 60%;}
   #header .category_menu .category .sectionLeft li{position: relative; width: 12.5%; text-align: center;}
   #header .category_menu .category .sectionLeft li a{display: block; width: 100%; padding: 15px 0; font-size: 1rem; color: #1a1a1a; transition: 0.1s; font-family: 'Noto Sans KR', sans-serif;}
@@ -28,7 +28,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
   #header .category_menu .category .sectionRight li a{font-size: 0.9rem; color: #1a1a1a; padding: 3px 20px; border: 1px solid #ddd; border-radius: 20px; font-family: 'Noto Sans KR', sans-serif; transition: 0.2s;}
   #header .category_menu .category .sectionRight li a:hover{background-color: #d60005; color: #eee; border: 1px solid #d60005;}
   #header .category_menu .sub_category{width: 100%; background-color: #fff; border-top: 1px solid #ddd; padding: 40px 0; display: none; position: absolute; z-index: 11;}
-  #header .category_menu .sub_category.on{display: block;}
+  #header .category_menu .sub_category.on{display: block;}  
   #header .category_menu .sub_category .sub_category_inner{display: flex; width: 90%; margin: 0 auto;}
   #header .category_menu .sub_category .sub_category_inner .index_list{width: 10%;}
   #header .category_menu .sub_category .sub_category_inner .index_list > li{padding: 15px 0; white-space: nowrap;}
@@ -59,7 +59,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
   #header .category_menu .sub_category .sub_category_inner .cate_list .list .RightsubCate .Rightcate_list li:hover img{transform: scale(1.1);}
 }@media screen and (max-width: 1024px){
   #header {width: 100%; margin: 0 auto; height: 60px; background-color: #fff;}
-  #header.on{position: fixed; z-index: 10;}
+  #header.fixed{position: fixed; z-index: 10;}
   #header .category_menu{display: none;}
   #header .header_top{display: flex; justify-content: space-between; width: 90%; margin: 0 auto; height: 60px; align-items: center;}
   #header .header_top .top_logo{width:30%;}

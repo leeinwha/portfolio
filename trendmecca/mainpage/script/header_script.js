@@ -19,16 +19,29 @@ $(function(){
     $('.sub_category_inner > .index_list > li').removeClass('active');
     $(this).addClass('active');
   });
+  
+  
 
-  $(window).resize(function() {
-    if($(window).width() > 1024) {
-      
-    
-    } else {
-    
+  var gbcat = $('.category_menu').offset().top;  
+  $(window).scroll(function(){
+    if ( $( document ).scrollTop() > gbcat ) {
+      $( '#header' ).addClass( 'fixed' );
+    }
+    else {
+      $( '#header' ).removeClass( 'fixed' );
     }
   });
   
-
-
+  $(window).resize(function() {
+    if($(window).width() < 1025) {
+      $(window).scroll(function(){
+        if ( $( document ).scrollTop() > $('#header') ) {
+          $( '#header' ).addClass( 'fixed' );
+        }
+      });
+    } 
+  });  
 });
+
+
+
