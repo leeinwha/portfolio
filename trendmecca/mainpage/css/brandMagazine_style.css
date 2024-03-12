@@ -3,9 +3,10 @@
   .brand_magazine{padding: 50px; background-color: #f7f7f7;}
   .brand_magazine .brand_magazine_swiper{display: none;}
   .brand_magazine .main_title{display: flex; justify-content: space-between; align-items: center; padding-bottom: 50px; font-family: 'Noto Sans KR', sans-serif;}
+  .brand_magazine .main_title .btn_more{color: #d60005; animation: btn_ani 1.5s linear infinite; font-weight: 700;}
+  @keyframes btn_ani{50%{color: #333; transform: scale(1.1);} 100%{color: #d60005; }}
   .brand_magazine .main_title p{font-size: 30px; }
-  .brand_magazine .main_title a{display: flex; align-items: center; column-gap: 10px; font-size: 22px; color: #aaa; transition: 0.3s;}
-  .brand_magazine .main_title a:hover{color: #333; transform: scale(1.1);}
+  .brand_magazine .main_title a{display: flex; align-items: center; column-gap: 10px; font-size: 22px; color: #aaa; transition: 0.3s;}  
   .brand_magazine .main_title span{font-weight: 700;}
   .brand_magazine .brand_list_pc{display: flex; column-gap: 1.3%; flex-wrap: wrap;}
   .brand_magazine .brand_list_pc .list_frame{width: 24%; border-radius: 20px; overflow: hidden; margin-bottom: 20px; position: relative;}

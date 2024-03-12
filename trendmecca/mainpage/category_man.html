@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/categoryman_style.css">
+  <title></title>
+</head>
+<style>
+  @media screen and (min-width: 1025px){
+    body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
+    .category_man{padding: 50px;}
+    .category_man .main_title{font-family: 'Noto Sans KR', sans-serif; font-size: 30px; padding-bottom: 50px;}
+    .category_man .main_title span{font-weight: 700;}
+    .category_man .product_wrap{display: flex; justify-content: space-between; width: 100%;}
+    .category_man .product_wrap .man_cate_list{width: 25%;}
+    .category_man .product_wrap .man_cate_list ul{width: 100%; position: relative;}
+    .category_man .product_wrap .man_cate_list ul li{display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 20px; font-family: 'Noto Sans KR', sans-serif;}
+    .category_man .product_wrap .man_cate_list ul li .cate_list{font-size: 25px; color: #999;}
+    .category_man .product_wrap .man_cate_list ul li .cate_list .bold{font-weight: 700; margin-right: 10px; color: #333; transition: 0.3s}
+    .category_man .product_wrap .man_cate_list ul li.active .cate_list .bold{color: #d60005;}    
+    .category_man .product_wrap .man_cate_list ul li .btn_more{opacity: 0; transition: 0.3s;}
+    .category_man .product_wrap .man_cate_list ul li .btn_more a{font-size: 15px; color: #333; font-weight: 500; }
+    .category_man .product_wrap .man_cate_list ul li.active .btn_more {opacity: 1; z-index: 5;}
+    .category_man .product_wrap .man_cate_list .active_border{position:absolute; left:0; top:0; width:100%; height:25%; border:2px solid #d60005; border-radius:50px; transition: 0.3s;}
+    .category_man .product_wrap .cate_product{width: 70%;}
+    .category_man .product_wrap .cate_product .man_product_list{display: none;}
+    .category_man .product_wrap .cate_product .man_product_list.on{display: block;}
+    .category_man .product_wrap .cate_product .man_product_list .category_swiper{overflow: hidden;}
+    .category_man .product_wrap .cate_product .man_product_list .image_wrap img{width: 100%; transition: 0.3s;}
+    .category_man .product_wrap .cate_product .man_product_list .image_wrap .prd_desc{font-family: 'Noto Sans KR', sans-serif;}
+    .category_man .product_wrap .cate_product .man_product_list .image_wrap .prd_desc h2{font-size: 18px; color: #555; padding: 10px 0;}
+    .category_man .product_wrap .cate_product .man_product_list .image_wrap .prd_desc del{font-size: 16px; color: #999; }
+    .category_man .product_wrap .cate_product .man_product_list .image_wrap .prd_desc p{font-size: 16px; color: #333; font-weight: bold; padding: 10px 0;}
+    .category_man .product_wrap .cate_product .man_product_list .swiper-slide:hover .image_wrap img{opacity: 0.5;}   
+    .category_man .product_wrap .cate_product .man_product_list .prd_more{display: none;}
+  }
+@media screen and (max-width: 1024px){
+  .category_man{padding: 20px;}
+  .category_man .main_title{font-size: 25px; font-family: 'Noto Sans KR', sans-serif; padding-bottom: 20px;}
+  .category_man .main_title span{font-weight: 700;}
+  .category_man .product_wrap .man_cate_list ul{display: flex; white-space:nowrap; height: 55px; align-items: center; overflow-x: scroll;}
+  .category_man .product_wrap .man_cate_list ul li{font-family: 'Noto Sans KR', sans-serif; white-space:nowrap; padding-right: 25px;}
+  .category_man .product_wrap .man_cate_list ul li .cate_list{font-size: 18px; color: #999;}
+  .category_man .product_wrap .man_cate_list ul li .cate_list .bold{font-weight: 700; margin-right: 5px; color: #333; transition: 0.3s}
+  .category_man .product_wrap .man_cate_list ul li.active .cate_list .bold{color: #d60005;}
+  .category_man .product_wrap .man_cate_list ul li .btn_more{display: none;}
+  .category_man .product_wrap .cate_product{padding: 20px 0;}
+  .category_man .product_wrap .cate_product .man_product_list .category_swiper{overflow: hidden;}
+  .category_man .product_wrap .cate_product .man_product_list .image_wrap img{width: 100%;}
+  .category_man .product_wrap .cate_product .man_product_list{display: none;}
+  .category_man .product_wrap .cate_product .man_product_list.on{display: block;}  
+  .category_man .product_wrap .cate_product .man_product_list .prd_more{width: 50%; margin: 0 auto; margin-top: 20px;}
+  .category_man .product_wrap .cate_product .man_product_list .prd_more a{font-size: 18px; font-family: 'Noto Sans KR', sans-serif; font-weight: 500; padding: 15px 20px; text-align: center; display: block; background-color: #555; color: #eee; border-radius: 10px; }
+  .category_man .product_wrap .cate_product .man_product_list .image_wrap .prd_desc{font-family: 'Noto Sans KR', sans-serif;}
+  .category_man .product_wrap .cate_product .man_product_list .image_wrap .prd_desc h2{font-size: 16px; color: #555; padding: 10px 0;}
+  .category_man .product_wrap .cate_product .man_product_list .image_wrap .prd_desc del{font-size: 14px; color: #999; }
+  .category_man .product_wrap .cate_product .man_product_list .image_wrap .prd_desc p{font-size: 14px; color: #333; font-weight: bold; padding: 10px 0;}
+}  
+</style>
+<body>
+  <section class="category_man">
+    <div class="main_title">Best of Best <span>남성 추천</span></div>
+    <div class="product_wrap">
+      <div class="man_cate_list">
+        <ul>
+          <li class="active" data-cate="mancate01" id="manlist1">
+            <div class="cate_list"><span class="bold">WATCH</span>시 계</div>
+            <div class="btn_more"><a href="javascript:;">더보기 +</a></div>
+          </li>
+          <li data-cate="mancate02" id="manlist2">
+            <div class="cate_list"><span class="bold">JEWELRY</span>주얼리</div>
+            <div class="btn_more"><a href="javascript:;">더보기 +</a></div>
+          </li>
+          <li data-cate="mancate03" id="manlist3">
+            <div class="cate_list"><span class="bold">B A G</span>가 방</div>
+            <div class="btn_more"><a href="javascript:;">더보기 +</a></div>
+          </li>
+          <li data-cate="mancate04" id="manlist4">
+            <div class="cate_list"><span class="bold">WALLET</span>지 갑</div>
+            <div class="btn_more"><a href="javascript:;">더보기 +</a></div>
+          </li>
+          <div class="active_border"></div>
+        </ul>
+      </div>
+      <div class="cate_product">
+        <ul>
+          <li id="mancate01" class="man_product_list on">
+            <div class="category_swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/watch/CAZ1010.BA0842.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>태그호이어 포뮬러1 크로노그래프 남성 메탈시계</h2>
+                      <del>2,550,000 원</del>
+                      <p>2,017,300 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/watch/GE1180LRGCH.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>가이거 스타크 남성 가죽시계</h2>
+                      <del>440,000 원</del>
+                      <p>110,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/watch/GE1180MWS.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>가이거 스타크 남성 메탈시계</h2>
+                      <del>480,000 원</del>
+                      <p>120,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/watch/H32705131.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>해밀턴 재즈마스터 오픈하트 남성 메탈시계</h2>
+                      <del>999,000 원</del>
+                      <p>974,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/watch/MTP-V001GL-7BUDF.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>카시오 아날로그 남성 가죽시계</h2>
+                      <del>35,000 원</del>
+                      <p>20,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/watch/SNKE01J1.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>세이코5 남성 메탈시계</h2>
+                      <del>149,000 원</del>
+                      <p>145,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/watch/T120.407.11.051.00.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>티쏘 씨스타 1000 남성 메탈시계</h2>
+                      <del>899,000 원</del>
+                      <p>831,000 원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="prd_more"><a href="javascript:;">시계 더보기 +</a></div>
+            </div>            
+          </li>
+          <li id="mancate02" class="man_product_list ">
+            <div class="category_swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/jewelry/77 0141 0712418.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>페레가모 간치니 브라운 가죽 팔찌</h2>
+                      <del>420,000 원</del>
+                      <p>210,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/jewelry/77 3540 0703871.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>페레가모 브레이디드 가죽 팔찌</h2>
+                      <del>209,000 원</del>
+                      <p>189,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/jewelry/DX1170040.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>디젤 세트 스테인리스스틸 반지</h2>
+                      <del>130,000 원</del>
+                      <p>74,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/jewelry/EGS20320405.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>아르마니 로고 스테인리스스틸 반지</h2>
+                      <del>79,000 원</del>
+                      <p>74,000 원</p>
+                    </div>
+                  </a>
+                </li>                
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/jewelry/YBA455321001.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>구찌 고스트 실버 팔찌</h2>
+                      <del>490,000 원</del>
+                      <p>330,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/jewelry/YBB433608001.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>구찌 펠린 헤드 실버 목걸이</h2>
+                      <del>379,000 원</del>
+                      <p>343,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/jewelry/YBB728265001.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>구찌 벌 GG 인그레이빙 실버 목걸이</h2>
+                      <del>429,000 원</del>
+                      <p>418,000 원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="prd_more"><a href="javascript:;">주얼리 더보기 +</a></div>
+            </div>            
+          </li>
+          <li id="mancate03" class="man_product_list ">
+            <div class="category_swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/bag/130270.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>몽블랑 사토리얼 도큐먼트 케이스 서류가방</h2>
+                      <del>2,540,000 원</del>
+                      <p>1,800,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/bag/23222 550.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>피엘라벤 하이 코스트 폴드색 백팩</h2>
+                      <del>139,000 원</del>
+                      <p>87,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/bag/24 0133 0740811.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>페레가모 서류가방</h2>
+                      <del>2,890,000 원</del>
+                      <p>1,250,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/bag/2VC796 2DMH F0002.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>프라다 리나일론 트라이앵글 로고 토트백</h2>
+                      <del>3,050,000 원</del>
+                      <p>2,070,000 원</p>
+                    </div>
+                  </a>
+                </li>                
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/bag/622-79387 10.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>요시다포터 탱커 백팩</h2>
+                      <del>349,000 원</del>
+                      <p>305,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/bag/70256 Otter Green.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>필슨 오리지널 브리프케이스 서류가방</h2>
+                      <del>585,000 원</del>
+                      <p>457,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/bag/70260 Navy.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>필슨 러기드 토트백</h2>
+                      <del>325,000 원</del>
+                      <p>258,000 원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="prd_more"><a href="javascript:;">가방 더보기 +</a></div>
+            </div>            
+          </li>
+          <li id="mancate04" class="man_product_list ">
+            <div class="category_swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/wallet/106653.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>몽블랑 마이스터스튁 6cc 카드지갑</h2>
+                      <del>350,000 원</del>
+                      <p>160,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/wallet/113993 V4651 1000.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>보테가베네타 인트레치아토 반지갑</h2>
+                      <del>580,000 원</del>
+                      <p>460,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/wallet/260987 BMJ1N 1000.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>구찌 마이크로시마 GG 반지갑</h2>
+                      <del>840,000 원</del>
+                      <p>437,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/wallet/3Y2P0P32 ZQU 0NO.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>발렌티노 가라바니 V로고 머니클립</h2>
+                      <del>359,000 원</del>
+                      <p>350,000 원</p>
+                    </div>
+                  </a>
+                </li>                
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/wallet/485631 C9H0U 1000.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>생로랑 모노그램 크로커다일 흑장 카드지갑</h2>
+                      <del>399,000 원</del>
+                      <p>361,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/wallet/529121 V4651 1000.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>보테가베네타 인트레치아토 카드지갑</h2>
+                      <del>349,000 원</del>
+                      <p>315,000 원</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;" class="image_wrap">
+                    <img src="./img/category_man/wallet/5525.jpg" alt="">
+                    <div class="prd_desc">
+                      <h2>몽블랑 마이스터스튁 6cc 머니클립</h2>
+                      <del>600,000 원</del>
+                      <p>315,000 원</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="prd_more"><a href="javascript:;">지갑 더보기 +</a></div>
+            </div>            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="./script/categoryman_script.js"></script>
+</html>
