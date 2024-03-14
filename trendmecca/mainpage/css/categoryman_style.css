@@ -1,5 +1,4 @@
-@media screen and (min-width: 1025px){
-  body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
+@media screen and (min-width: 1025px){  
   .category_man{padding: 50px;}
   .category_man .main_title{font-family: 'Noto Sans KR', sans-serif; font-size: 30px; padding-bottom: 50px;}
   .category_man .main_title span{font-weight: 700;}
@@ -27,8 +26,8 @@
   .category_man .product_wrap .cate_product .man_product_list .prd_more{display: none;}
 }
 @media screen and (max-width: 1024px){
-.category_man{padding: 20px;}
-.category_man .main_title{font-size: 25px; font-family: 'Noto Sans KR', sans-serif; padding-bottom: 20px;}
+.category_man{padding: 40px 20px;}
+.category_man .main_title{font-size: 25px; font-family: 'Noto Sans KR', sans-serif; padding-bottom: 40px;}
 .category_man .main_title span{font-weight: 700;}
 .category_man .product_wrap .man_cate_list ul{display: flex; white-space:nowrap; height: 55px; align-items: center; overflow-x: scroll;}
 .category_man .product_wrap .man_cate_list ul li{font-family: 'Noto Sans KR', sans-serif; white-space:nowrap; padding-right: 25px;}

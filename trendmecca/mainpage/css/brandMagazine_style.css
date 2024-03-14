@@ -1,5 +1,4 @@
-@media screen and (min-width: 1025px){
-  body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
+@media screen and (min-width: 1025px){  
   .brand_magazine{padding: 50px; background-color: #f7f7f7;}
   .brand_magazine .brand_magazine_swiper{display: none;}
   .brand_magazine .main_title{display: flex; justify-content: space-between; align-items: center; padding-bottom: 50px; font-family: 'Noto Sans KR', sans-serif;}

@@ -1,5 +1,4 @@
-@media screen and (min-width: 1025px){
-  body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
+@media screen and (min-width: 1025px){  
   .content_m{display: none;}
   .mdpick{padding: 50px;}
   .mdpick .main_title{font-family: 'Noto Sans KR', sans-serif; font-size: 30px; padding-bottom: 50px;}

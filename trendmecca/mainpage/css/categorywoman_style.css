@@ -1,0 +1,49 @@
+@media screen and (min-width: 1025px){  
+  .category_woman{padding: 50px; background-color: #f7f7f7;}
+  .category_woman .main_title{font-family: 'Noto Sans KR', sans-serif; font-size: 30px; padding-bottom: 50px;}
+  .category_woman .main_title span{font-weight: 700;}
+  .category_woman .product_wrap{display: flex; justify-content: space-between; width: 100%;}
+  .category_woman .product_wrap .woman_cate_list{width: 25%;}
+  .category_woman .product_wrap .woman_cate_list ul{width: 100%; position: relative;}
+  .category_woman .product_wrap .woman_cate_list ul li{display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 20px; font-family: 'Noto Sans KR', sans-serif;}
+  .category_woman .product_wrap .woman_cate_list ul li .cate_list{font-size: 25px; color: #999;}
+  .category_woman .product_wrap .woman_cate_list ul li .cate_list .bold{font-weight: 700; margin-right: 10px; color: #333; transition: 0.3s}
+  .category_woman .product_wrap .woman_cate_list ul li.active .cate_list .bold{color: #d60005;}    
+  .category_woman .product_wrap .woman_cate_list ul li .btn_more{opacity: 0; transition: 0.3s;}
+  .category_woman .product_wrap .woman_cate_list ul li .btn_more a{font-size: 15px; color: #333; font-weight: 500; }
+  .category_woman .product_wrap .woman_cate_list ul li.active .btn_more {opacity: 1; z-index: 5;}
+  .category_woman .product_wrap .woman_cate_list .active_border{position:absolute; left:0; top:0; width:100%; height:25%; border:2px solid #d60005; border-radius:50px; transition: 0.3s;}
+  .category_woman .product_wrap .cate_product{width: 70%;}
+  .category_woman .product_wrap .cate_product .woman_product_list{display: none;}
+  .category_woman .product_wrap .cate_product .woman_product_list.on{display: block;}
+  .category_woman .product_wrap .cate_product .woman_product_list .category_swiper{overflow: hidden;}
+  .category_woman .product_wrap .cate_product .woman_product_list .image_wrap img{width: 100%; transition: 0.3s;}
+  .category_woman .product_wrap .cate_product .woman_product_list .image_wrap .prd_desc{font-family: 'Noto Sans KR', sans-serif;}
+  .category_woman .product_wrap .cate_product .woman_product_list .image_wrap .prd_desc h2{font-size: 18px; color: #555; padding: 10px 0;}
+  .category_woman .product_wrap .cate_product .woman_product_list .image_wrap .prd_desc del{font-size: 16px; color: #999; }
+  .category_woman .product_wrap .cate_product .woman_product_list .image_wrap .prd_desc p{font-size: 16px; color: #333; font-weight: bold; padding: 10px 0;}
+  .category_woman .product_wrap .cate_product .woman_product_list .swiper-slide:hover .image_wrap img{opacity: 0.5;}   
+  .category_woman .product_wrap .cate_product .woman_product_list .prd_more{display: none;}
+}
+@media screen and (max-width: 1024px){
+  .category_woman{padding: 40px 20px;}
+  .category_woman .main_title{font-size: 25px; font-family: 'Noto Sans KR', sans-serif; padding-bottom: 40px;}
+  .category_woman .main_title span{font-weight: 700;}
+  .category_woman .product_wrap .woman_cate_list ul{display: flex; white-space:nowrap; height: 55px; align-items: center; overflow-x: scroll;}
+  .category_woman .product_wrap .woman_cate_list ul li{font-family: 'Noto Sans KR', sans-serif; white-space:nowrap; padding-right: 25px;}
+  .category_woman .product_wrap .woman_cate_list ul li .cate_list{font-size: 18px; color: #999;}
+  .category_woman .product_wrap .woman_cate_list ul li .cate_list .bold{font-weight: 700; margin-right: 5px; color: #333; transition: 0.3s}
+  .category_woman .product_wrap .woman_cate_list ul li.active .cate_list .bold{color: #d60005;}
+  .category_woman .product_wrap .woman_cate_list ul li .btn_more{display: none;}
+  .category_woman .product_wrap .cate_product{padding: 20px 0;}
+  .category_woman .product_wrap .cate_product .woman_product_list .category_swiper{overflow: hidden;}
+  .category_woman .product_wrap .cate_product .woman_product_list .image_wrap img{width: 100%;}
+  .category_woman .product_wrap .cate_product .woman_product_list{display: none;}
+  .category_woman .product_wrap .cate_product .woman_product_list.on{display: block;}  
+  .category_woman .product_wrap .cate_product .woman_product_list .prd_more{width: 50%; margin: 0 auto; margin-top: 20px;}
+  .category_woman .product_wrap .cate_product .woman_product_list .prd_more a{font-size: 18px; font-family: 'Noto Sans KR', sans-serif; font-weight: 500; padding: 15px 20px; text-align: center; display: block; background-color: #555; color: #eee; border-radius: 10px; }
+  .category_woman .product_wrap .cate_product .woman_product_list .image_wrap .prd_desc{font-family: 'Noto Sans KR', sans-serif;}
+  .category_woman .product_wrap .cate_product .woman_product_list .image_wrap .prd_desc h2{font-size: 16px; color: #555; padding: 10px 0;}
+  .category_woman .product_wrap .cate_product .woman_product_list .image_wrap .prd_desc del{font-size: 14px; color: #999; }
+  .category_woman .product_wrap .cate_product .woman_product_list .image_wrap .prd_desc p{font-size: 14px; color: #333; font-weight: bold; padding: 10px 0;}
+}

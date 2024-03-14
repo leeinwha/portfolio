@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  new Swiper ('.bestPrd_swiper', {
+  new Swiper ('.Prd_swiper', {
     loop: true,
     speed: 1000,
     spaceBetween: '5%',    

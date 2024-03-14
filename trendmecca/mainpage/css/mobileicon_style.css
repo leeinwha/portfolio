@@ -1,7 +1,5 @@
-@media screen and (min-width: 1025px){
-  body{width:100%; min-width:1400px; max-width: 2000px; margin: 0 auto;}
-  .mobile_icon{display: none;}
-  
+@media screen and (min-width: 1025px){  
+  .mobile_icon{display: none;}  
 }@media screen and (max-width: 1024px){  
   .mobile_icon{padding: 20px;}
   .mobile_icon .icon_list{display: flex; flex-wrap: wrap; column-gap: 4%;}
