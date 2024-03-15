@@ -8,7 +8,7 @@ $(document).ready(function () {
     },
     breakpoints: {
       1025: {
-        slidesPerView: 1,
+        slidesPerView: 1,        
       },
       300: {
         slidesPerView: 1,

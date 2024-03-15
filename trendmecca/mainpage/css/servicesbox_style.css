@@ -1,0 +1,23 @@
+@media screen and (min-width: 1025px){  
+  .services_box .services_box_swiper{width: 100%;}    
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide{background-color: #222;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a{display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 20px 40px;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .icon{width: 20%; border-radius: 100%; background-color: #333; transition: 0.3s;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a:hover .icon{opacity: 0.6;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .icon img{width: 100%;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .desc{width: 65%; font-family: 'Noto Sans KR', sans-serif; color: #eee;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .desc h2{font-size: 14px; font-weight: 400;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .desc h1{font-size: 20px; padding: 10px 0; font-weight: 500;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .desc p{font-size: 12px; font-weight: 300; color: #bbb;}
+}
+@media screen and (max-width: 1024px){    
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide{background-color: #222;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a{display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 20px 40px;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .icon{width: 20%; border-radius: 100%; background-color: #333; transition: 0.3s;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a:hover .icon{opacity: 0.7;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .icon img{width: 100%;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .desc{width: 63%; font-family: 'Noto Sans KR', sans-serif; color: #eee;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .desc h2{font-size: 14px; font-weight: 400;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .desc h1{font-size: 20px; padding: 10px 0; font-weight: 500;}
+  .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .desc p{font-size: 12px; font-weight: 300; color: #bbb;}
+}
