@@ -1,0 +1,31 @@
+@media screen and (min-width: 1025px){
+  .content_m{display: none;}
+  .footer{padding: 50px; background-color: #f7f7f7; }
+  .footer .footer_top{display: flex; justify-content: space-between; width: 100%;}
+  .footer .footer_top .footer_category{background-color: #fff; width: 25%; font-family: 'Noto Sans KR', sans-serif; color: #666; margin: 0 1% 0 0; padding: 30px;}
+  .footer .footer_top .footer_category h2{font-weight: 600; font-size: 15px; border-bottom: 2px solid #222; padding-bottom: 15px;}
+  .footer .footer_top .footer_category h1{font-size: 25px; font-weight: 600; color: #444; padding: 15px 0;}
+  .footer .footer_top .footer_category h3{font-size: 18px; font-weight: 600; color: #444; padding: 15px 0;}
+  .footer .footer_top .footer_category p{line-height: 30px; color: #444; font-size: 14px;}
+  .footer .footer_top .footer_category a:hover p{text-decoration: underline; color: #444; }
+  .footer .footer_top .footer_category .btn_inquire{margin-top: 30px; white-space: nowrap;}
+  .footer .footer_top .footer_category .btn_inquire a{padding: 10px 20px; border: 1px solid #ccc; color: #555; transition: 0.3s;}
+  .footer .footer_top .footer_category .btn_inquire a:hover{border: 1px solid #333;}
+  .footer .footer_top .footer_category .brand_swiper{ margin-top: 20px; overflow: hidden; }  
+  .footer .footer_top .footer_category .brand_swiper .swiper-wrapper .swiper-slide a img{width: 70%;}  
+  .footer .footer_top .footer_category .sns_icon a i{background-color: #e7e7e7; width: 30px; height: 30px; border-radius: 100%; text-align: center; line-height: 30px; margin-right: 5px; color: #000; transition: 0.5s;}
+  .footer .footer_top .footer_category .sns_icon a:hover i{color: #eee; background-color: #333;}
+  .footer .footer_top .footer_category .qr{display: flex; margin-top: 20px;}
+  .footer .footer_top .footer_category .qr img{width: 20%; border: 1px solid;}
+  .footer .footer_top .footer_category .qr p{margin-left: 20px;}
+  .footer .footer_middle{display: flex; column-gap: 1.5%; padding: 30px 0; font-family: 'Noto Sans KR', sans-serif;}
+  .footer .footer_middle li a{font-size: 14px; color: #666; letter-spacing: -1px;}
+  .footer .footer_middle li a span{font-weight: 800;}
+  .footer .footer_bottom{font-family: 'Noto Sans KR', sans-serif;}
+  .footer .footer_bottom li p{font-size: 12px; color: #666; line-height: 25px;}
+  .footer .footer_bottom li p span{font-weight: 800;}
+  .footer .copyright{padding: 30px 0; font-size: 10px; color: #888;} 
+}
+@media screen and (max-width: 1024px){
+  .content_pc{display: none;}
+}
