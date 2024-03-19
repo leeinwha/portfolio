@@ -11,6 +11,7 @@
   .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .desc p{font-size: 12px; font-weight: 300; color: #bbb;}
 }
 @media screen and (max-width: 1024px){    
+  .services_box .services_box_swiper{overflow: hidden;}
   .services_box .services_box_swiper .swiper-wrapper .swiper-slide{background-color: #222;}
   .services_box .services_box_swiper .swiper-wrapper .swiper-slide a{display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 20px 40px;}
   .services_box .services_box_swiper .swiper-wrapper .swiper-slide a .icon{width: 20%; border-radius: 100%; background-color: #333; transition: 0.3s;}

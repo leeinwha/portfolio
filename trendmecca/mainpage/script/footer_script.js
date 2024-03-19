@@ -28,4 +28,17 @@ $(document).ready(function () {
     $(this).children().next().parent().siblings().find('.arrow_icon').removeClass('on');            
   });
 
+  
+  $("body").on("mousewheel", function (e) {
+    var wheel = e.originalEvent.wheelDelta;
+  
+    if (wheel > 0) {
+      //스크롤 올릴때
+      $( '.nav_icon' ).addClass( 'on' );
+    } else {
+      //스크롤 내릴때
+      $( '.nav_icon' ).removeClass( 'on' );
+    }
+  });
+   
 });
