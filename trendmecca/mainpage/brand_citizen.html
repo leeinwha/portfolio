@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="stylesheet" href="./css/common.css"> 
+  <title></title>
+</head>
+<body>
+  <div id="header"></div>
+  <div id="BrandMagazineCitizen"></div>
+  <div id="footer"></div>  
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script>
+  $(document).ready(function () {
+    $("#header").load("./html/header.html");
+    $("#BrandMagazineCitizen").load("../brandmagazine/citizen/index.html");
+    $("#footer").load("./html/footer.html");
+  });
+</script>
+</html>

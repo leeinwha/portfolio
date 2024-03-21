@@ -1,4 +1,15 @@
   
+  header {width: 100%; margin: 0 auto; height: 60px; background-color: #fff; position: fixed; top: 0;}  
+  header .header_top{display: flex; justify-content: space-between; width: 90%; margin: 0 auto; height: 60px; align-items: center;}
+  header .header_top .top_logo{width:30%;}
+  header .header_top .top_logo img{width: 100%;}
+  header .header_top .top_mypage .recent_icon{display: none;}
+  header .header_top .top_mypage .user_icon{display: none;}
+  header .header_top .top_mypage .headphone_icon{display: none;}
+  header .header_top .top_search_box{width: 55%; text-align: center; position: relative;}
+  header .header_top .top_search_box .search_box{width: 100%; height: 40px; border: none; border-radius: 50px; background-color: #eee; color: #2e2e2e; font-size: 1rem; font-family: 'Noto Sans KR', sans-serif; text-indent: 10px;}
+  header .header_top .top_search_box .btn_search{position: absolute; right: 2%; top: 6px;}
+  header .header_top .top_mypage{width: 5%;}
   .mobile_category .icon_wrap{display: flex; padding: 15px 5px; overflow-x: scroll; border-bottom: 1px solid #ddd; position: fixed; background-color: #fff; z-index: 1; width: 100%; top: 60px;}
   .mobile_category .icon_wrap .icon_content{padding: 5px ; text-align: center;}
   .mobile_category .icon_wrap .icon_content img{width: 70px;}
