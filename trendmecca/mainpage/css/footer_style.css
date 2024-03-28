@@ -47,6 +47,10 @@
   .footer .footer_mobile .info p{font-size: 11px; color: #666; line-height: 22px;}
   .footer .nav_icon{display: flex; justify-content: space-around; position: fixed; column-gap: 10%; left: 0; bottom: -50px; width: 100%; height: 50px; align-items: center; background-color: #f7f7f7; z-index: 20; transition: 0.5s;}
   .footer .nav_icon.on{bottom: 0;}
+  .footer .nav_icon li{position: relative;}
+  .footer .nav_icon li .click_icon{width: 200%; position: absolute; right: -210%; top: 20%;}
+  .footer .nav_icon li .click_icon>img{width: 100%;}
   .footer .nav_icon li:first-child a img{animation: nav_icon_ani 1.5s linear infinite;}
   @keyframes nav_icon_ani{50%{color: #333; transform: scale(1.2);} 100%{color: #d60005; }}
+  
 }
