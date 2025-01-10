@@ -5,25 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-  <link rel="stylesheet" href="./css/common.css">  
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/header_style.css">
   <title>TimeMecca</title>
 </head>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" defer></script> 
 <script>
-  $(document).ready(function () {
-    $("#header").load("./html/header.html");
-    $("#mainbanner").load("./html/main_banner.html");
-    $("#mobileicon").load("./html/mobile_icon.html");
-    $("#mdpick").load("./html/mdpick.html");
-    $("#weeklybest").load("./html/weeklybest.html");
-    $("#brandmagazine").load("./html/brand_magazine.html");
-    $("#categoryman").load("./html/category_man.html");
-    $("#categorywoman").load("./html/category_woman.html");
-    $("#newproduct").load("./html/newproduct.html");
-    $("#servicesbox").load("./html/servicesbox.html");
-    $("#footer").load("./html/footer.html");
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = [
+      { id: "#header", url: "./html/header.html" },
+      { id: "#mainbanner", url: "./html/main_banner.html" },
+      { id: "#mobileicon", url: "./html/mobile_icon.html" },
+      { id: "#mdpick", url: "./html/mdpick.html" },
+      { id: "#weeklybest", url: "./html/weeklybest.html" },
+      { id: "#brandmagazine", url: "./html/brand_magazine.html" },
+      { id: "#categoryman", url: "./html/category_man.html" },
+      { id: "#categorywoman", url: "./html/category_woman.html" },
+      { id: "#newproduct", url: "./html/newproduct.html" },
+      { id: "#servicesbox", url: "./html/servicesbox.html" },
+      { id: "#footer", url: "./html/footer.html" },
+      
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const section = sections.find((s) => s.id === `#${entry.target.id}`);
+            if (section) {
+              $(entry.target).load(section.url);
+              observer.unobserve(entry.target);
+            }
+          }
+        });
+      },
+      { rootMargin: "0px 0px 200px 0px" }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(document.querySelector(section.id));
+    });
   });
+
 </script>
 
 <body>
