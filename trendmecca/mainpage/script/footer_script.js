@@ -40,5 +40,4 @@ $(document).ready(function () {
       $( '.nav_icon' ).removeClass( 'on' );
     }
   });
-   
 });
